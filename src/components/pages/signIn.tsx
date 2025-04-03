@@ -21,8 +21,8 @@ export default function SignInSide() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    try {
-      const response = await apipost("/pdf/login", data);
+    try {      
+      const response = await apipost("/auth/login", data);
       login(response.data);
     } catch (err: any) {
       console.log(err);

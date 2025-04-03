@@ -53,7 +53,7 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     try {
-      const response = await apipost("/pdf/sign-up", data);
+      const response = await apipost("/auth/sign-up", data);
       if (response?.data) {
         navigate("/signin");
         setSnackOpen(true);
